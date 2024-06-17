@@ -9,29 +9,29 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var counterLbl: UILabel!
-    @IBOutlet weak var storyTextView: UITextView!
+    @IBOutlet private weak var counterLabel: UILabel!
+    @IBOutlet private weak var storyTextView: UITextView!
     
-    var count: Int = 0 {
+    private var count: Int = 0 {
         willSet(number) {
-            counterLbl.text = "Значение счётчика: \(number)"
+            counterLabel.text = "Значение счётчика: \(number)"
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        counterLbl.text = "Значение счётчика: \(count)"
+        counterLabel.text = "Значение счётчика: \(count)"
         storyTextView.text = "История изменений:"
         
     }
 
-    @IBAction func increaseBtn(_ sender: Any) {
+    @IBAction private func increase(_ sender: Any) {
         count += 1
         addItemStory(action: "increase")
     }
     
-    @IBAction func decreaseBtn(_ sender: Any) {
+    @IBAction private func decrease(_ sender: Any) {
         if count >= 1 {
             count -= 1
             addItemStory(action: "decrease")
@@ -40,12 +40,12 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func resetBtn(_ sender: Any) {
+    @IBAction private func reset(_ sender: Any) {
         count = 0
         addItemStory(action: "reset")
     }
     
-    func addItemStory(action: String){
+    private func addItemStory(action: String){
         let date = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yy HH:mm:ss"

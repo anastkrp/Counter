@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Counter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7N-ih-Awn">
-                                <rect key="frame" x="16" y="638" width="398" height="260"/>
+                                <rect key="frame" x="16" y="558" width="361" height="260"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="260" id="Qx1-2U-BbV"/>
@@ -29,10 +29,10 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ux7-G6-brh">
-                                <rect key="frame" x="16" y="508" width="398" height="100"/>
+                                <rect key="frame" x="16" y="428" width="361" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwf-uz-hGf">
-                                        <rect key="frame" x="0.0" y="0.0" width="127.33333333333333" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="115" height="100"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -41,11 +41,11 @@
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="24"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="resetBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oui-9V-NGM"/>
+                                            <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0YU-8l-jCv"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVg-Dy-nLC">
-                                        <rect key="frame" x="135.33333333333334" y="0.0" width="127.33333333333334" height="100"/>
+                                        <rect key="frame" x="123" y="0.0" width="115" height="100"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -54,11 +54,11 @@
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="24"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="decreaseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eLt-8s-kzb"/>
+                                            <action selector="decrease:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3YJ-FP-6tA"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9g0-gA-dmd">
-                                        <rect key="frame" x="270.66666666666669" y="0.0" width="127.33333333333331" height="100"/>
+                                        <rect key="frame" x="246" y="0.0" width="115" height="100"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -67,7 +67,7 @@
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="24"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="increaseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g3q-T6-CHu"/>
+                                            <action selector="increase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2VM-Vg-YXf"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -76,7 +76,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Значение счётчика:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOJ-Vm-kRf">
-                                <rect key="frame" x="16" y="59" width="398" height="423"/>
+                                <rect key="frame" x="16" y="59" width="361" height="343"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -98,7 +98,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="counterLbl" destination="OOJ-Vm-kRf" id="fry-uK-T88"/>
+                        <outlet property="counterLabel" destination="OOJ-Vm-kRf" id="1av-Cb-Zef"/>
                         <outlet property="storyTextView" destination="u7N-ih-Awn" id="gch-zH-dAS"/>
                     </connections>
                 </viewController>
